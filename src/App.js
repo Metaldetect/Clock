@@ -12,11 +12,17 @@ function App() {
       const formattedDate = formatLocaleDate(currentDate);
 
       const element = (
-        <div>
-          <h1>Поточний час:</h1>
-          <h2>Зараз годин: {currentDate.toLocaleTimeString()}.</h2>
-          <h2>Поточна дата: {formattedDate}.</h2>
-          <h2>Поточний рік: {currentDate.getFullYear()}.</h2>
+        <div className="d-flex justify-content-center align-items-center flex-column text-light ">
+          <h1 className="display-4 mb-5 mt-5 fw-bold">Поточний час:</h1>
+          <div className="d-flex flex-row d-grid gap-3 ">
+            <h2 className="lead fs-1 fst-italic">
+              {currentDate.toLocaleTimeString()}
+            </h2>
+            <h2 className="lead fs-1 fst-italic">{formattedDate}</h2>
+            <h2 className="lead fs-1 fst-italic">
+              {currentDate.getFullYear()}
+            </h2>
+          </div>
         </div>
       );
       setRootElement(element);
