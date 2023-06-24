@@ -15,10 +15,8 @@ function App() {
         <div>
           <h1>Поточний час:</h1>
           <h2>Зараз годин: {currentDate.toLocaleTimeString()}.</h2>
-          <h2>Поточна дата:</h2>
-          <h2>Сьогодні: {formattedDate}.</h2>
-          <h2>Поточний рік:</h2>
-          <h2>Тепер: {currentDate.getFullYear()}.</h2>
+          <h2>Поточна дата: {formattedDate}.</h2>
+          <h2>Поточний рік: {currentDate.getFullYear()}.</h2>
         </div>
       );
       setRootElement(element);
